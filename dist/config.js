@@ -1,9 +1,10 @@
-console.log("heroku specificy the port you have to listen, PORT ISSSSSSSSSSSS ", process.env.PORT || 8080)
-
-module.exports = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+console.log("heroku specificy the port you have to listen, PORT ISSSSSSSSSSSS ", process.env.PORT || 8080);
+exports.default = {
     port: process.env.PORT || 8080,
     db: {
-        prod: "mongodb+srv://username:pw@clustername.jrfj8.mongodb.net/dbname" || 'mongodb://localhost/reddit-clone',
+        prod: "mongodb://localhost/reddit-clone" || 'mongodb://localhost/reddit-clone',
         test: 'mongodb://localhost/reddit-test',
         options: {
             useNewUrlParser: true,
@@ -17,3 +18,4 @@ module.exports = {
         expiry: '7d'
     }
 };
+//# sourceMappingURL=config.js.map
